@@ -9,7 +9,6 @@ const app = express();
 
 app.use(express.json());
 connectDB().then(()=>{
-  console.log("MongoDB Connected Successfully");
 
 app.use("/api/books",bookRoutes);
 
@@ -21,4 +20,4 @@ app.listen(PORT, () => {
 .catch((error)=>{
   console.error("Failed to connect to MongoDB:", error);
   process.exit(1);
-})
+}) 
