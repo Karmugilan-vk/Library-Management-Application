@@ -1,11 +1,13 @@
 const express = require("express");
+const app = express();
+
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bookRoutes = require("./routes/bookRoutes");
 const connectDB = require("./db");
 
 dotenv.config();
-const app = express();
+
 
 app.use(express.json());
 connectDB().then(()=>{
