@@ -1,17 +1,17 @@
-const express = require("express");
-const app = express();
 
+const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bookRoutes = require("./routes/bookRoutes");
 const connectDB = require("./db");
+const authRoutes = require("./routes/auth");
 
 dotenv.config();
-
+const app = express();
 
 app.use(express.json());
 connectDB().then(()=>{
-
+app.use("/api/login", authRoutes);
 app.use("/api/books",bookRoutes);
 
 const PORT = process.env.PORT || 3000;
