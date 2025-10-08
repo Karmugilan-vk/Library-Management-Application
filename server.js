@@ -1,25 +1,22 @@
-
 const express = require("express");
+const dotenv = require("dotenv").config();
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-const bookRoutes = require("./routes/bookRoutes");
 const connectDB = require("./db");
-const authRoutes = require("./routes/auth");
+const errorHandler = require("./middleware/errorHandler");
 
-dotenv.config();
 const app = express();
 
+connectDB();
+
 app.use(express.json());
-connectDB().then(()=>{
-app.use("/api/login", authRoutes);
-app.use("/api/books",bookRoutes);
+ 
+app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/books", require("./routes/bookRoutes"));
+
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-})
-.catch((error)=>{
-  console.error("Failed to connect to MongoDB:", error);
-  process.exit(1);
-}) 
