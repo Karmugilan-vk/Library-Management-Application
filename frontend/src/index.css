@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Container for Forms ===== */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 380px;
+  text-align: center;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #ffdd57;
+}
+
+/* ===== Input Fields ===== */
+form input {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+form input::placeholder {
+  color: #ddd;
+}
+
+form input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+/* ===== Buttons ===== */
+button {
+  background: #ffdd57;
+  color: #1e3c72;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #f1c40f;
+  transform: scale(1.05);
+}
+
+/* ===== Dashboard Page ===== */
+.dashboard {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  width: 600px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard h1 {
+  color: #ffdd57;
+  margin-bottom: 10px;
+}
+
+.dashboard p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* ===== Add Book Section ===== */
+.add-book {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.add-book h2 {
+  margin-bottom: 10px;
+  color: #00ffcc;
+}
+
+.add-book input {
+  background: rgba(255, 255, 255, 0.25);
+  margin: 5px 0;
+}
+
+/* ===== Book List ===== */
+.book-list {
+  margin-top: 25px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.book-list h3 {
+  color: #00ffcc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.book-item {
+  background: rgba(255, 255, 255, 0.2);
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.book-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.book-item span {
+  font-size: 16px;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #ff4757;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #e84118;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .dashboard {
+    width: 90%;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
