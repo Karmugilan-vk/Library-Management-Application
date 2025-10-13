@@ -14,7 +14,6 @@ body {
   align-items: center;
 }
 
-/* ===== Container for Forms ===== */
 .container {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -31,7 +30,6 @@ body {
   color: #ffdd57;
 }
 
-/* ===== Input Fields ===== */
 form input {
   width: 100%;
   padding: 10px 15px;
@@ -54,7 +52,6 @@ form input:focus {
   transform: scale(1.02);
 }
 
-/* ===== Buttons ===== */
 button {
   background: #ffdd57;
   color: #1e3c72;
@@ -72,7 +69,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* ===== Dashboard Page ===== */
+
 .dashboard {
   background: rgba(255, 255, 255, 0.15);
   padding: 30px;
@@ -103,7 +100,7 @@ button:hover {
   background: #c0392b;
 }
 
-/* ===== Add Book Section ===== */
+
 .add-book {
   margin-top: 15px;
   padding: 15px;
@@ -121,7 +118,7 @@ button:hover {
   margin: 5px 0;
 }
 
-/* ===== Book List ===== */
+
 .book-list {
   margin-top: 25px;
   text-align: left;
@@ -171,7 +168,6 @@ button:hover {
   background: #e84118;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 600px) {
   .dashboard {
     width: 90%;

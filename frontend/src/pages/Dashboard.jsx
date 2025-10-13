@@ -25,7 +25,7 @@ function Dashboard() {
       alert("Book added successfully");
       setTitle("");
       setAuthor("");
-      fetchBooks(); // reload list
+      fetchBooks(); 
     } catch (error) {
       alert(error.response?.data?.message || "Failed to add book");
     }
@@ -90,12 +90,12 @@ function Dashboard() {
           {books.map((book) => (
             <li key={book._id}>
               <b>{book.title}</b> — {book.author}
-              <button onClick={() => deleteBook(book._id)}>🗑️ Delete</button>
+              <button onClick={() => deleteBook(book._id)}> Delete</button>
             </li>
           ))}
         </ul>
       ) : (
-        <p>No books added yet.</p>
+        <p>No books added yet</p>
       )}
     </div>
   );
